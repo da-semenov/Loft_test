@@ -29,11 +29,16 @@
 5. Запустите локальный сервер.
 - ``python manage.py runserver``
 
-Админка Django admin - admin
+Создание новой публикации: http://127.0.0.1:8000/new/
+
+Тестовая база и суперпользователь уже созданы
+Админка Django:
+user: admin
+password: admin
 
 ## Основные использованные технологии
 * [python 3.8](https://www.python.org/)
-* [django](https://www.djangoproject.com/)
+* [django 3.2](https://www.djangoproject.com/)
 
 ## Автор
 

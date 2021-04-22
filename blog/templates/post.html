@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}{{post.title}}{% endblock %}
+{% block content %}
+{% load filters %}
+
+<h1><a href="{% url 'posts:index' %}">На Главную страницу</a></h1>
+<div class="post">
+    <header>
+        <h1>{{post.title}}</h1>
+    </header>
+        <small class="text-muted">{{ post.pub_date }}</small>
+    <article>
+        <strong class="d-block text-gray-dark">{{ post.text|linebreaksbr }}</strong>
+    </article>
+    <footer>
+            {% if post.tags %}
+            <strong class="d-block text-gray-dark">#{{ post.tags.title }}</strong>
+            {% endif %}
+    </footer>
+</div><br>
+
+<div class="comments">
+    {% for comment in comments.all %}
+    <div class="comment">
+        <p>
+            <small class="text-muted">{{ comment.created }}</small>
+        </p>
+        <p>
+            {{ comment.text|linebreaksbr }}
+        </p><br>
+    </div>
+    {% empty %}
+    <p><b>Комментарии отсутствуют</b></p>
+    {% endfor %}
+</div>
+
+<div class="form">
+    <form action="./{{ post.id }}" method="post">
+        {% csrf_token %}
+        <h5 class="card-header">Добавить комментарий:</h5>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        {{ comment_form.as_p }}
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+            </div>
+    </form>
+</div>
+<a href=""></a>
+{% endblock %}

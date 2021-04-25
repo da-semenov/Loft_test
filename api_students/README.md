@@ -2,7 +2,7 @@
 [![Django](https://img.shields.io/badge/-Django-464646??style=flat-square&logo=Django)](https://www.djangoproject.com/)
 # REST АПИ для воображаемого клиентского приложения, которое должно отображать страницу со списком студентов
 
-##Описание
+## Описание
 У студента есть поля:
 - ФИО
 - дата рождения

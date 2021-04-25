@@ -31,11 +31,6 @@
 
 Создание новой публикации: http://127.0.0.1:8000/new/
 
-Тестовая база и суперпользователь уже созданы
-Админка Django:
-user: admin
-password: admin
-
 ## Основные использованные технологии
 * [python 3.8](https://www.python.org/)
 * [django 3.2](https://www.djangoproject.com/)

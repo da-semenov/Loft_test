@@ -20,7 +20,7 @@
 2. Установите виртуальное окружение в корневой директории api_students
 - ``python -m venv venv``
 3. Активируйте виртуальное окружение.
-- ``source venv/bin/activate``
+- ``source venv/Scripts/activate``
 4. Установите зависимости.
 - ``pip install -r requirements.txt``
 5. Выполните миграции.
